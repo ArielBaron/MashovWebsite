@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mashov Data Fetcher</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="Options-Screen">
+        <h1>Hello Your'e in System Please Pick Your Desigred Page:</h1>
+        <button onclick="Grades_page()" id="Grade-T-Btn" class="s-btn">לוח ציונים</button>
+        <button onclick="Avg_page()" id="Avg-Grade-Btn" class="s-btn">לוח ממומצע לכל ציון</button>
+        <button onclick="TimeTable_page()" id="T-T-Btn" class="s-btn">מערכת שעות</button>
+        <button onclick="Behavior_page()" id="B-Btn" class="s-btn">הערות התנהגות </button>
+    </div>
+    <div id="GTableContainer"></div>
+
+    <div id="BehaivorContainer"></div>
+
+
+    <div id="Start-Screen">
+        <div id="Login-div">
+            <h1>Mashov Data Fetcher</h1>
+            <form id="uploadForm" enctype="multipart/form-data">
+                <label for="fileInput">Upload JSON file:</label>
+                <input type="file" id="fileInput" name="fileInput" accept=".json" required>
+                <button type="submit" class="s-btn" style="height: 200px; width: 200px; font-size: 20px; background-color: red;">Upload</button>
+            </form>
+            <div id="response"></div>
+        </div>
+        <div id="Info-div">
+            <h1>Welcome to Mashov Data Fetcher</h1>
+            <p>This tool allows you to easily fetch data from the Mashov website and display it in a user-friendly format.</p>
+            <p>Simply upload a JSON file containing the input data specified, and the tool will do the rest.</p>
+            <pre>Here Is what the JSON file should look like:
+                {
+                    "SEMEL": "XXXXXX", 
+                    "YEAR": 2024/Current YEAR,
+                    "ID": "XXXXXX",
+                    "PASSWORD": "XXXXXX"
+                }
+            </pre>
+            <p>To download this format click <a href="/Assets/input_file_for_mashov_Struc.json" download>Here</a></p>
+            <p>
+                Heres how to get the SEMEL:
+                go to the <a href="https://web.mashov.info/students/login" target="_blank">mashov website</a> and login, you will see school name and the SEMEL in the topleft corner:
+                <img src="/Assets/צילום מסך 2024-05-28 093059.png" alt="SEMEL"></img>
+                If you Dont know your PASSWORD/ID ask your teacher/school admin for help. 
+            </p>
+            <h1>Enjoy! </h1>
+                
+               
+
+            
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+    
+    
+    
+</body>
+</html>
